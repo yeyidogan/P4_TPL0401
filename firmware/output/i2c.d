@@ -28,4 +28,4 @@
 .\output\i2c.o: .\driver\i2c.h
 .\output\i2c.o: .\driver\timer.h
 .\output\i2c.o: .\app\main_task.h
-.\output\i2c.o: .\app\tpl0401.h
+.\output\i2c.o: .\app\wiper.h

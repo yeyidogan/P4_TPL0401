@@ -28,7 +28,7 @@ __NO_RETURN void task_main(void *argument){
 		if (wiper_value < WIPER_MIN_VAL){
 			wiper_value = WIPER_MIN_VAL;
 		}
-		tpl0401_write(wiper_value);
+		wiper_write(wiper_value);
 	}
 }
 

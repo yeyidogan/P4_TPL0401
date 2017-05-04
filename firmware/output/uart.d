@@ -26,5 +26,5 @@
 .\output\uart.o: .\app\main.h
 .\output\uart.o: .\driver\timer.h
 .\output\uart.o: .\app\main_task.h
-.\output\uart.o: .\app\tpl0401.h
+.\output\uart.o: .\app\wiper.h
 .\output\uart.o: .\app\util.h

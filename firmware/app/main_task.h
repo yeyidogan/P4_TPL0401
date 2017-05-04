@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include "main.h"
 #include "uart.h"
-#include "tpl0401.h"
+#include "wiper.h"
 
 /* define ------------------------------------------------------------*/
 /* macro -------------------------------------------------------------*/

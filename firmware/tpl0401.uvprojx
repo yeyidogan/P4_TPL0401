@@ -400,9 +400,9 @@
               <FilePath>.\app\util.c</FilePath>
             </File>
             <File>
-              <FileName>tpl0401.c</FileName>
+              <FileName>wiper.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\app\tpl0401.c</FilePath>
+              <FilePath>.\app\wiper.c</FilePath>
             </File>
           </Files>
         </Group>

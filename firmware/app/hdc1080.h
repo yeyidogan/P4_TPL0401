@@ -3,8 +3,8 @@
 *	HDC1080 Temperature and Humidity Sensor functions
 *	Created date: 2016.12.08
 *******************************************************************************/
-#ifndef __HDC1080_H_
-#define __HDC1080_H_
+#ifndef _HDC1080_H_
+#define _HDC1080_H_
 
 #include "cmsis_os2.h"
 #include <stdbool.h>

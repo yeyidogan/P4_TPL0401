@@ -3,7 +3,7 @@
 ".\output\main_task.o"
 ".\output\pub_var.o"
 ".\output\util.o"
-".\output\tpl0401.o"
+".\output\wiper.o"
 ".\output\gpio.o"
 ".\output\i2c.o"
 ".\output\timer.o"

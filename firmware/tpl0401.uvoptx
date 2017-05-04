@@ -229,8 +229,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\app\tpl0401.c</PathWithFileName>
-      <FilenameWithoutPath>tpl0401.c</FilenameWithoutPath>
+      <PathWithFileName>.\app\wiper.c</PathWithFileName>
+      <FilenameWithoutPath>wiper.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

@@ -28,4 +28,4 @@
 .\output\main_task.o: .\stm32_lib\stm32f0xx_i2c.h
 .\output\main_task.o: .\driver\timer.h
 .\output\main_task.o: app\main_task.h
-.\output\main_task.o: app\tpl0401.h
+.\output\main_task.o: app\wiper.h
