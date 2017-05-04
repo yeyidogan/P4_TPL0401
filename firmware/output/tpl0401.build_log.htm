@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.23.0.0
 Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Yilmaz Eyidogan, Byk, LIC=5QQKR-K6QR3-HZVDE-I1TQS-LP21Y-W5ZVP
+License Information: Yilmaz Eyidogan, Byk, LIC=5QQKR-KKB40-QRGEB-FP0R0-VUYX7-SR4RH
  
 Tool Versions:
 Toolchain:       MDK-ARM Cortex-M0/M0+ 256K for ST  Version: 5.23
@@ -21,20 +21,20 @@ Target DLL:      UL2CM3.DLL V1.159.7.0
 Dialog DLL:      TARMCM1.DLL V1.12.0.0
  
 <h2>Project:</h2>
-C:\Users\yilmaz\Documents\GitHub\P4_TPL0401\firmware\tpl0401.uvprojx
-Project File Date:  05/03/2017
+E:\Git_Projects\P4_TPL0401\firmware\tpl0401.uvprojx
+Project File Date:  05/04/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
+compiling timer.c...
 compiling tpl0401.c...
 compiling main_task.c...
-compiling main.c...
-compiling i2c.c...
 compiling uart.c...
-compiling timer.c...
+compiling i2c.c...
+compiling main.c...
 linking...
-Program Size: Code=12880 RO-data=448 RW-data=5632 ZI-data=2104  
+Program Size: Code=13272 RO-data=448 RW-data=5632 ZI-data=2104  
 ".\output\tpl0401.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -69,25 +69,25 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.0.1
 
    * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.1.0
+      Source file:   CMSIS\RTOS2\RTX\Source\rtx_lib.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
+      Source file:   CMSIS\RTOS2\RTX\Template\main.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
+      Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
       Include file:  CMSIS\RTOS2\RTX\Include\rtx_os.h
       Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
-      Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
-      Source file:   CMSIS\RTOS2\RTX\Template\main.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
+      Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib
       Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
-      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
       Source file:   CMSIS\RTOS2\RTX\Template\Mutex.c
       Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
-      Source file:   CMSIS\RTOS2\RTX\Source\rtx_lib.c
-      Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib
 
    * Component: Keil::Device:Startup:2.2.3
       Source file:   Device\Source\ARM\startup_stm32f030x8.s
-      Source file:   Device\Source\system_stm32f0xx.c
       Source file:   Device\Source\ARM\STM32F0xx_OPT.s
-Build Time Elapsed:  00:00:03
+      Source file:   Device\Source\system_stm32f0xx.c
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

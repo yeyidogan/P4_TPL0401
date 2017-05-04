@@ -14,6 +14,7 @@ void tpl0401_write(uint8_t data){
 	
 	statusT = osMutexAcquire(mutex_i2c, 1000); //wait for 1 second
 	if (statusT == osOK){
+		i2c_tx_buf[0] = TPL0401_REGISTER_ADDRESS;
 		i2c_master_send_start_stop = I2C_MASTER_SEND_START;
 		i2c_msg_tx_s.length_wr = sizeof(ST_TPL0401_WRITE_REGISTER);
 		i2c_msg_tx_s.chip_add = TPL0401_CHIP_ADDRESS;

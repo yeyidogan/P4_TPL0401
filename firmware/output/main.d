@@ -27,3 +27,4 @@
 .\output\main.o: .\stm32_lib\stm32f0xx_i2c.h
 .\output\main.o: .\driver\timer.h
 .\output\main.o: app\main_task.h
+.\output\main.o: app\tpl0401.h

@@ -29,3 +29,4 @@
 .\output\tpl0401.o: .\driver\i2c.h
 .\output\tpl0401.o: .\driver\timer.h
 .\output\tpl0401.o: .\app\main_task.h
+.\output\tpl0401.o: .\app\tpl0401.h

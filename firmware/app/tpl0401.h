@@ -13,6 +13,7 @@
 
 /* define ------------------------------------------------------------*/
 #define TPL0401_CHIP_ADDRESS 0x5C
+#define TPL0401_REGISTER_ADDRESS 0x00
 /* macro -------------------------------------------------------------*/
 /* typedef -----------------------------------------------------------*/
 typedef struct{
@@ -20,6 +21,7 @@ typedef struct{
 	uint8_t data;
 }ST_TPL0401_WRITE_REGISTER;
 /* functions ---------------------------------------------------------*/
+extern void tpl0401_write(uint8_t data);
 /* variables ---------------------------------------------------------*/
 
 #endif
