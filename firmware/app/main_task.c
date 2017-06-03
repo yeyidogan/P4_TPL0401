@@ -6,7 +6,8 @@
 #include "main_task.h"
 
 /* define ------------------------------------------------------------*/
-#define WIPER_MIN_VAL 0x32
+#define WIPER_MIN_VAL 0x20
+#define WIPER_MAX_VAL 0x7F
 /* macro -------------------------------------------------------------*/
 /* typedef -----------------------------------------------------------*/
 /* variables ---------------------------------------------------------*/
@@ -23,12 +24,21 @@ uint8_t wiper_value = WIPER_MIN_VAL;
 __NO_RETURN void task_main(void *argument){
 	
 	while (1){
-		osDelay(100);
-		++wiper_value;
+		osDelay(1000);
 		if (wiper_value < WIPER_MIN_VAL){
+			wiper_value = WIPER_MAX_VAL;
+		}
+		if (wiper_value > WIPER_MAX_VAL){
 			wiper_value = WIPER_MIN_VAL;
 		}
 		wiper_write(wiper_value);
+		if (wiper_value == WIPER_MIN_VAL){
+			osDelay(5000);
+		}
+		if (wiper_value == WIPER_MAX_VAL){
+			osDelay(5000);
+		}
+		//--wiper_value;
 	}
 }
 

@@ -15,6 +15,7 @@ void wiper_write(uint8_t data){
 	statusT = osMutexAcquire(mutex_i2c, 1000); //wait for 1 second
 	if (statusT == osOK){
 		i2c_tx_buf[0] = WIPER_REGISTER_ADDRESS;
+		i2c_tx_buf[1] = data;
 		i2c_master_send_start_stop = I2C_MASTER_SEND_START;
 		i2c_msg_tx_s.length_wr = sizeof(ST_WIPER_WRITE_REGISTER);
 		i2c_msg_tx_s.chip_add = WIPER_CHIP_ADDRESS;

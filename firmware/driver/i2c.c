@@ -46,7 +46,7 @@ void I2C1_IRQHandler(void){
 		and NBYTES data have been transferred. 
 		It is cleared by software when START bit or STOP bit is set.*/
 		if (i2c_master_send_start_stop > I2C_MASTER_SEND_STOP){
-			ulTempI2C = (uint32_t)(((uint32_t)i2c_msg_tx_s.chip_add << 1) & I2C_CR2_SADD);
+			ulTempI2C = (uint32_t)((uint32_t)i2c_msg_tx_s.chip_add & I2C_CR2_SADD);
 			ulTempI2C |= I2C_CR2_RD_WRN; //read
 			ptr_i2c_rx = i2c_rx_buf;
 			ulTempI2C |= (uint32_t)(((uint32_t)i2c_msg_tx_s.length_rd << 16 ) & I2C_CR2_NBYTES);
@@ -166,21 +166,24 @@ uint8_t i2c_master_process(uint8_t rw){
 	I2C1->CR1 |= I2C_CR1_PE;
 	osDelay(2);
 	
-	if (i2c_master_send_start_stop == 0x00 || i2c_master_send_start_stop > I2C_MASTER_SEND_MAX)
+	if (i2c_master_send_start_stop == 0x00 || i2c_master_send_start_stop > I2C_MASTER_SEND_MAX){
 		return false;
+	}
 	i2c_status_s.byte = (uint8_t)0x00;
 	ptr_i2c_tx = i2c_tx_buf;
-	ulTempI2C = (uint32_t)(((uint32_t)i2c_msg_tx_s.chip_add << 1) & I2C_CR2_SADD);
+	ulTempI2C = (uint32_t)((uint32_t)i2c_msg_tx_s.chip_add & I2C_CR2_SADD);
 	if (rw == I2C_MASTER_READ){
 		ulTempI2C |= I2C_CR2_RD_WRN;
 		ptr_i2c_rx = i2c_rx_buf;
-		if (i2c_msg_tx_s.length_rd == 0x00)
+		if (i2c_msg_tx_s.length_rd == 0x00){
 			return false;
+		}
 		ulTempI2C |= (uint32_t)(((uint32_t)i2c_msg_tx_s.length_rd << 16 ) & I2C_CR2_NBYTES);
 	}
 	else{ //write
-		if (i2c_msg_tx_s.length_wr == 0x00)
+		if (i2c_msg_tx_s.length_wr == 0x00){
 			return false;
+		}
 		ulTempI2C |= (uint32_t)(((uint32_t)i2c_msg_tx_s.length_wr << 16 ) & I2C_CR2_NBYTES);
 	}
 
@@ -190,8 +193,9 @@ uint8_t i2c_master_process(uint8_t rw){
 	START_I2C_TIMER;
 	while (I2C1->ISR & I2C_ISR_BUSY){
 		osDelay(2);
-		if (CHECK_I2C_TIMER_REACH_TO(150))
+		if (CHECK_I2C_TIMER_REACH_TO(150)){
 			return false;
+		}
 	}
 	/* Generate a START condition */
 	I2C1->CR2 |= I2C_CR2_START;
